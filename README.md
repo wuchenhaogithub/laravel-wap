@@ -9,6 +9,11 @@
 $ composer require wuchenhao/laravel-shop -vvv
 ```
 
+## Commands
+```shell 
+$ php artisan wap-member:install
+```
+
 ## Usage
 
 TODO
