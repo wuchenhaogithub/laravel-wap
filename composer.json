@@ -1,0 +1,24 @@
+{
+    "name": "wuchenhao/laravel-shop",
+    "description": "Package description here.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "武晨昊",
+            "email": "18310828498@163.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Wuchenhao\\LaravelShop\\": "src"
+        }
+    },
+    "extra":{
+        "laravel":{
+            "providers":[
+                "Wuchenhao\\LaravelShop\\Wap\\Member\\Providers\\MemberServiceProvider"
+            ]
+        }
+    }
+}

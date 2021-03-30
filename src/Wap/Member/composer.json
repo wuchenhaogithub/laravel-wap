@@ -1,0 +1,19 @@
+{
+    "name": "wuchenhao/laravel-shop-wap-member",
+    "description": "Package description here.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "武晨昊",
+            "email": "18310828498@163.com"
+        }
+    ],
+    "require": {
+        "overtrue/laravel-wechat": "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wuchenhao\\LaravelShop\\Wap\\Member\\": ""
+        }
+    }
+}
