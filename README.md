@@ -26,11 +26,3 @@ _The code contribution process is not very formal. You just need to make sure th
 ## License
 
 MIT
-
-##微信配置
-````
-APPID:wx74845c40d0f03996
-AppSecret:b7eddedeeb9d5c00086594b5e441267c
-Token：myjcywangluoweixin
-EncodingAESKey：tsTdzb1wjYCw4JoChy057HEh9MMva3eFnkgKZuIRzaA
-```# laravel-wap
