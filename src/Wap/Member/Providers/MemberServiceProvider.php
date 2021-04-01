@@ -1,6 +1,7 @@
 <?php
 namespace Wuchenhao\LaravelShop\Wap\Member\Providers;
 
+use EasyWeChat\OfficialAccount\Application as OfficialAccount;
 use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\Arr;
 use Illuminate\Support\ServiceProvider;
@@ -23,9 +24,8 @@ class MemberServiceProvider extends ServiceProvider{
     {
         $this->registerRoutes();
         $this->mergeConfigFrom(__DIR__ . '/../Config/Member.php','wap.member');//加载config
-        $this->registerRouteMiddleware();
         $this->registerPublishing();
-
+        $this->registerRouteMiddleware();
     }
     /**
      * 注册生成配置文件
@@ -49,6 +49,28 @@ class MemberServiceProvider extends ServiceProvider{
         $this->loadMemberAuthConfig();
         $this->loadMigrations();
         $this->loadCommands();
+        $this->loadSingletonWechatOfficial();
+    }
+
+    /**
+     * 由于组件加载 顺序，easyWechat 在 member组件加载之前，需要重新加载微信配置信息
+     * 重新实例注册wechat.official_account
+     * @author: Wu ChenHao
+     * @Time: 2021/4/1 14:39
+     */
+    protected function loadSingletonWechatOfficial(){
+        $name = 'official_account';
+        $account = 'default';
+        $config =  config('wechat.'.$name);
+        $class = OfficialAccount::class;
+        $this->app->singleton("wechat.{$name}.{$account}", function ($laravelApp) use ($name, $account, $config,$class) {
+            $app = new $class(array_merge(config("wechat.{$name}.{$account}", []), $config));
+            if (config('wechat.defaults.use_laravel_cache')) {
+                $app['cache'] = $laravelApp['cache.store'];
+            }
+            $app['request'] = $laravelApp['request'];
+            return $app;
+        });
     }
 
     /**
@@ -83,14 +105,14 @@ class MemberServiceProvider extends ServiceProvider{
     private function registerRoutes()
     {
         Route::group($this->routeConfiguration(), function () {
-            $this->loadRoutesFrom($this->configPath());
+            $this->loadRoutesFrom($this->routesPath());
         });
     }
     /**
      * Set the config path
      * @return string
      */
-    protected function configPath()
+    protected function routesPath()
     {
         return __DIR__ . '/../Http/routes.php';
     }

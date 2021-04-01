@@ -1,0 +1,51 @@
+[
+    {
+        "name": "shineyork/laravel-package-maker",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/shineyork/laravel-package-maker.git",
+            "reference": "c8c709fcb0c15807d4f40878c27c5395f5682384"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/shineyork/laravel-package-maker/zipball/c8c709fcb0c15807d4f40878c27c5395f5682384",
+            "reference": "c8c709fcb0c15807d4f40878c27c5395f5682384",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "symfony/console": "^3.0|^4.0",
+            "symfony/filesystem": "^3.0|^4.0",
+            "symfony/process": "^3.0|^4.0"
+        },
+        "time": "2019-08-11T14:31:13+00:00",
+        "bin": [
+            "bin/laravel-package-maker"
+        ],
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "ShineYork\\LaravelPackageMaker\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "shineyork",
+                "email": "shineyork@sixstaredu.com"
+            }
+        ],
+        "description": "a composer laravel package maker"
+    }
+]

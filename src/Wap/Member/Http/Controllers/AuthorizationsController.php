@@ -2,7 +2,7 @@
 namespace Wuchenhao\LaravelShop\Wap\Member\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Wuchenhao\LaravelShop\Wap\Member\Facades\Member;
 use Wuchenhao\LaravelShop\Wap\Member\Models\User;
 
 class AuthorizationsController extends Controller{
@@ -18,9 +18,9 @@ class AuthorizationsController extends Controller{
                 "image_head" => $wechatUser->avatar
             ]);
         }
-       Auth::guard('member')->login($user);
+        Member::login($user);
 
-        var_dump(Auth::guard('member')->check());
+        var_dump(Member::check());
         return "通过";
     }
 

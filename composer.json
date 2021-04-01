@@ -8,7 +8,6 @@
             "email": "18310828498@163.com"
         }
     ],
-    "require": {},
     "autoload": {
         "psr-4": {
             "Wuchenhao\\LaravelShop\\": "src"

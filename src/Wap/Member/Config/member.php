@@ -3,8 +3,8 @@ return [
   'wechat'=>[
       'official_account' => [
           'default' => [
-              'app_id'  => env('WECHAT_OFFICIAL_ACCOUNT_APPID', 'your-app-id'),         // AppID
-              'secret'  => env('WECHAT_OFFICIAL_ACCOUNT_SECRET', 'your-app-secret'),    // AppSecret
+              'app_id'  => 'wxf4ea2aa3c36604ab',         // AppID
+              'secret'  => '7cc2c53612720cfe318532ab74f21efc',    // AppSecret
               'token'   => env('WECHAT_OFFICIAL_ACCOUNT_TOKEN', 'your-token'),           // Token
               'aes_key' => env('WECHAT_OFFICIAL_ACCOUNT_AES_KEY', ''),                 // EncodingAESKey
               /*
