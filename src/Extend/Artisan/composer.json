@@ -1,0 +1,17 @@
+{
+    "name": "wuchenhao\/laravel-shop-extend-artisan",
+    "description": "this is artisan",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "武晨昊",
+            "email": "18310828498@163.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Wuchenhao\\LaravelShop\\Extend\\Artisan\\": ""
+        }
+    }
+}

@@ -27,7 +27,7 @@ class WechatMenusController extends Controller{
                     [
                         "type" => "view",
                         "name" => "test-shop",
-                        "url"  => "http://5ev4vy.natappfree.cc/wap/goods"
+                        "url"  => "http://b2hsr3.natappfree.cc/wap/goods"
                     ]
                 ],
             ],

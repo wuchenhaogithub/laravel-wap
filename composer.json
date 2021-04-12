@@ -19,5 +19,8 @@
                 "Wuchenhao\\LaravelShop\\Wap\\Member\\Providers\\MemberServiceProvider"
             ]
         }
+    },
+    "require": {
+        "shineyork/laravel-package-maker": "dev-master"
     }
 }

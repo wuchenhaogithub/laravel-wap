@@ -1,0 +1,10 @@
+<?php
+
+namespace DummyNamespace;
+/**
+ * @see \DummyTarget
+ */
+class DummyClass
+{
+
+}
