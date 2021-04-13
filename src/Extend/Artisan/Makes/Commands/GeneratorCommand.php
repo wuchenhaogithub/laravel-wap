@@ -3,7 +3,6 @@
 namespace Wuchenhao\LaravelShop\Extend\Artisan\Makes\Commands;
 
 use Illuminate\Support\Str;
-use Symfony\Component\Console\Input\InputArgument;
 
 trait GeneratorCommand
 {
@@ -14,7 +13,6 @@ trait GeneratorCommand
 
     protected function getPath($name){
         $name = Str::replaceFirst($this->rootNamespace(), '', $name);
-
         return $this->packagePath.'/'.str_replace('\\', '/', $name).'.php';
     }
 }
