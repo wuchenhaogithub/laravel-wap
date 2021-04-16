@@ -6,5 +6,6 @@ class ModelMakeCommand extends command {
 
     use GeneratorCommand;
     protected $name = 'shop-make:model';
+    protected $defaultNamespace = "\Models"; //获取路径
 
 }

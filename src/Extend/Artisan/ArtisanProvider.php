@@ -4,6 +4,7 @@ namespace Wuchenhao\LaravelShop\Extend\Artisan;
 
 use Illuminate\Support\ServiceProvider;
 use Wuchenhao\LaravelShop\Extend\Artisan\Makes\Commands\ClassMakeCommand;
+use Wuchenhao\LaravelShop\Extend\Artisan\Makes\Commands\MigrateMakeCommand;
 use Wuchenhao\LaravelShop\Extend\Artisan\Makes\Commands\ModelMakeCommand;
 use Wuchenhao\LaravelShop\Extend\Artisan\Makes\Commands\ControllerMakeCommand;
 
@@ -13,6 +14,7 @@ class ArtisanProvider extends ServiceProvider
         ClassMakeCommand::class,
         ModelMakeCommand::class,
         ControllerMakeCommand::class,
+        MigrateMakeCommand::class
     ];
 
     public function register()
