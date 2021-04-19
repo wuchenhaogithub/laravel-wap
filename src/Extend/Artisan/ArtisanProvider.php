@@ -8,6 +8,7 @@ use Wuchenhao\LaravelShop\Extend\Artisan\Makes\Commands\MigrateMakeCommand;
 use Wuchenhao\LaravelShop\Extend\Artisan\Makes\Commands\ModelMakeCommand;
 use Wuchenhao\LaravelShop\Extend\Artisan\Makes\Commands\ControllerMakeCommand;
 use Wuchenhao\LaravelShop\Extend\Artisan\Makes\Commands\SeederMakeCommand;
+use Wuchenhao\LaravelShop\Extend\Artisan\Makes\Commands\ObserverMakeCommand;
 
 class ArtisanProvider extends ServiceProvider
 {
@@ -17,6 +18,7 @@ class ArtisanProvider extends ServiceProvider
         ControllerMakeCommand::class,
         MigrateMakeCommand::class,
         SeederMakeCommand::class,
+        ObserverMakeCommand::class,
     ];
 
     public function register()

@@ -22,7 +22,7 @@ class ModelMakeCommand extends command {
         $this->call('shop-make:migration', [
             'name' => "create_{$table}_table",
             '--create' => $table,
-            '--path'=>$this->getPackageInput(),
+            '--path'=>trim($this->argument('package')),
         ]);
     }
 

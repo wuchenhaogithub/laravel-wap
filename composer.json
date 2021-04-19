@@ -16,7 +16,10 @@
     "extra":{
         "laravel":{
             "providers":[
-                "Wuchenhao\\LaravelShop\\Wap\\Member\\Providers\\MemberServiceProvider"
+                "Wuchenhao\\LaravelShop\\Wap\\Member\\Providers\\MemberServiceProvider",
+                "Wuchenhao\\LaravelShop\\Wap\\Goods\\Providers\\GoodsServiceProvider",
+                "Wuchenhao\\LaravelShop\\Extend\\Artisan\\ArtisanProvider",
+                "Wuchenhao\\LaravelShop\\Data\\Goods\\Providers\\GoodsProvider"
             ]
         }
     },

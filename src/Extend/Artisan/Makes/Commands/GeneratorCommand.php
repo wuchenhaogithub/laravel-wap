@@ -36,7 +36,7 @@ trait GeneratorCommand
      */
     protected function getPackageInput()
     {
-        return str_replace('\\',"/",trim($this->argument('package')));
+        return str_replace('/',"\\",trim($this->argument('package')));
     }
 
 
