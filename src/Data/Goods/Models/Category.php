@@ -4,7 +4,7 @@ namespace Wuchenhao\LaravelShop\Data/Goods\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Goods extends Model
+class Category extends Model
 {
     //
 }
