@@ -33,7 +33,7 @@ class CategoryObserver
      */
     public function created(Category $category)
     {
-        //
+        dd('created');
     }
 
     /**
@@ -44,7 +44,12 @@ class CategoryObserver
      */
     public function updated(Category $category)
     {
-        //
+        dd('updated');
+    }
+
+    public function updating(Category $category)
+    {
+        dd('updating');
     }
 
     /**
@@ -55,7 +60,7 @@ class CategoryObserver
      */
     public function deleted(Category $category)
     {
-        //
+        dd('deleted');
     }
 
     /**
@@ -66,7 +71,7 @@ class CategoryObserver
      */
     public function restored(Category $category)
     {
-        //
+        dd('restored');
     }
 
     /**
@@ -77,6 +82,6 @@ class CategoryObserver
      */
     public function forceDeleted(Category $category)
     {
-        //
+        dd('forceDeleted');
     }
 }

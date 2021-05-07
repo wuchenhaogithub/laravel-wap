@@ -4,8 +4,7 @@ namespace Wuchenhao\LaravelShop\Data\Goods\Providers;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\ServiceProvider;
-use Wuchenhao\LaravelShop\Data\Goods\Models\Category;
-use Wuchenhao\LaravelShop\Data\Goods\Observers\CategoryObserver;
+use Wuchenhao\LaravelShop\Data\Goods\Models\Model;
 
 class GoodsProvider extends ServiceProvider
 {
@@ -15,7 +14,7 @@ class GoodsProvider extends ServiceProvider
     }
 
     protected function loadObserver(){
-        Category::observe(CategoryObserver::class);
+        Model::observes();
     }
 
 

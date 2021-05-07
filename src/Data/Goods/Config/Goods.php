@@ -12,5 +12,8 @@ return [
             'prefix' => 'goods_'
         ],
     ],
+    'observes'=>[
+        'Category'=>'CategoryObserver'
+    ]
 ];
 ?>

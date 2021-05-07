@@ -55,11 +55,34 @@ class Category extends Model
 
         // 如果需要添加一个分类,用户会自己填写 path,level
         // 需要一个事件监听Category创建的之前的动作
-        $model = new Category();
-        $model->name = 1;
-        $model->pid = 1;
-        $model->is_root = 1;
-        return $model->save();
+//        $model = Category::create([
+//            "name"=>1,
+//            'pid'=>2,
+//            'is_root'
+//        ]);
+//        $model = Category::query()->find(6);
+//        $model->name = "笔记本1";
+//        return $model->save();
+
+        //批量更新方法 没有触发事件，查看源码 查询update方法
+        /**
+         * 批量修改update 不触发update事件， Illuminate\Database\Eloquent/Builder::update()
+         * 修改update  添加触发事件
+            if ($this->model->fireModelEvent('updating') === false) {
+             return false;
+            }
+            $return = $this->toBase()->update($this->addUpdatedAtColumn($values));
+            $this->model->fireModelEvent('updated', false);
+            return  $return;
+         *
+         * 需修改 fireModelEvent 方法属性 改为 public @ Illuminate\Database\Eloquent\Concerns/HasEvents::fireModelEvent();
+         */
+
+
+        return Category::where('id',6)->update(['name'=>'笔记本1']);
+
+
+
 //        return Category::where('id', 2)->first()->children;
     }
 }
